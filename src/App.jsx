@@ -48,7 +48,7 @@ function App() {
     data.append('declaracao', formData.declaracao);
 
     try {
-      const response = await axios.post('https://api-campanha-das-maes.onrender.com/', data, {
+      const response = await axios.post('https://api-campanha-das-maes.onrender.com/api/submit', data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
