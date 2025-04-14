@@ -142,7 +142,11 @@ function App() {
             <option value="Pinheiro">Pinheiro</option>
             <option value="Pedreiras">Pedreiras</option>
             <option value="Zé Doca">Zé Doca</option>
+            <option value="Presidente Dutra">Presidente Dutra</option>
+            <option value="Trizidela do Vale">Trizidela do Vale</option>
+            <option value="Coroatá">Coroatá</option>
             <option value="Lago da Pedra">Lago da Pedra</option>
+            <option value="Codó">Codó</option>
           </select>
 
           <fieldset>
