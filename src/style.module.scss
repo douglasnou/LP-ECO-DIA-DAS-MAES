@@ -1,0 +1,470 @@
+.Section {
+    max-width: 3000px;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .Image {
+        width: 100%;
+        margin: 0;
+
+        img {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    .ImageSmall {
+        display: none;
+        width: 100%;
+
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .TextSmall {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            text-align: center;
+            color: #FB4881;
+
+            width: 70%;
+
+        }
+    }
+
+    .FormSection {
+        width: 100%;
+        background: #FDCADD;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .Phrase {
+            background: #FB4881;
+            width: 100%;
+            height: 83px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 64px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+            }
+        }
+
+        .Rules {
+            background: #FDCADD;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                color: #FB4881;
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 122%;
+                text-align: justify;
+
+                width: 50%;
+
+            }
+        }
+
+        .Title {
+            width: 100%;
+
+            h1 {
+                color: #FFFFFF;
+                font-family: Montserrat;
+                font-weight: 800;
+                font-size: 64px;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .FormContainer {
+            width: 80%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .InputText,
+            ::-webkit-input-placeholder,
+            select,
+            fieldset,
+            input[type="file"] {
+                background: #FFFFFF;
+                width: 70%;
+                height: 100px;
+                margin: 10px auto;
+                padding-left: 20px;
+                border: none;
+                border-radius: 27px;
+
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 32px;
+                text-transform: uppercase;
+                color: #FB4881;
+
+            }
+
+            fieldset {
+                background: none;
+            }
+
+            input[type="file"] {
+                background: none;
+                font-size: 20px;
+            }
+
+            input[type="file"]::file-selector-button {
+
+                width: 20%;
+                height: 45px;
+                border-radius: 15px;
+                font-size: 16px;
+                background: #FF93B5;
+                color: #FFFFFF;
+                cursor: pointer;
+
+                &:hover {
+                    background: #FFFFFF;
+                    color: #FF93B5;
+                }
+
+            }
+
+            input[type="radio"] {
+                appearance: none;
+                height: 1.25em;
+                position: relative;
+                width: 1.25em;
+            }
+
+            input[type='radio']::after,
+            input[type='radio']::before {
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            input[type='radio']::after {
+                background-color: #FB4881;
+                content: '';
+                height: 50%;
+                left: 25%;
+                transform: scale(0);
+                transform-origin: center;
+                transition: transform 0.2s;
+                top: 25%;
+                width: 50%;
+            }
+
+            input[type='radio']::before {
+                border: 2px solid #FB4881;
+                box-sizing: border-box;
+                content: '';
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type='radio']:checked::after {
+                transform: scale(1);
+            }
+
+            .Check {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 30px;
+                }
+
+                label {
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 122%;
+                    color: #FB4881;
+                    width: 40%;
+                }
+            }
+
+            .Btn {
+                width: 450px;
+                height: 85px;
+                border: none;
+                border-radius: 27px;
+                background: #FF93B5;
+                margin: 30px auto;
+
+                font-family: Montserrat;
+                font-weight: 800;
+                font-size: 32px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                &:hover {
+                    background: #FB4881;
+                    transition: 0.8s;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+
+    .FooterSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #FB4881;
+
+        .FooterTitles {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 64px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+
+            h3 {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 32px;
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: -20px;
+            }
+
+            p {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 32px;
+                text-align: center;
+                color: #FFFFFF;
+
+                width: 70%;
+            }
+        }
+
+        .FooterConfidential {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 15px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+            }
+
+            p {
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 15px;
+                text-align: center;
+                color: #FFFFFF;
+
+                width: 60%;
+                margin-top: -5px;
+
+            }
+        }
+
+        .FooterLine {
+            width: 100%;
+            border: 3px solid #FFFFFF;
+        }
+
+        .FooterGreetings {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 120%;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                width: 50%;
+
+            }
+        }
+    }
+
+    .FinalSection {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            margin: 20px;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .Section {
+        .Image {
+            display: none;
+        }
+
+        .ImageSmall {
+            display: block;
+        }
+
+        .TextSmall{
+            display: flex;
+        }
+
+        .FormSection {
+            .Phrase {
+                height: 30px;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .Rules {
+                background: #FFFFFF;
+
+                p {
+                    font-size: .75rem;
+                }
+            }
+
+            .Title {
+                h1 {
+                    font-size: 1rem;
+                }
+            }
+
+            .FormContainer {
+
+                .InputText,
+                ::-webkit-input-placeholder,
+                select,
+                fieldset,
+                input[type="file"] {
+                    height: 27px;
+                    font-size: .625rem;
+                }
+
+                input[type="file"]::file-selector-button {
+                    font-size: .625rem;
+                    width: 60px;
+                    height: 20px;
+                }
+
+                .Check {
+                    margin-top: 15px;
+
+                    label {
+                        font-size: .5rem;
+                        text-align: justify;
+                    }
+                }
+
+                .Btn {
+                    width: 72px;
+                    height: 27px;
+                    font-size: .625rem;
+                }
+            }
+        }
+
+        .FooterSection {
+            .FooterTitles {
+                h2 {
+                    font-size: 1.25rem;
+                }
+
+                h3,
+                p {
+                    font-size: .75rem;
+                }
+
+            }
+
+            .FooterConfidential {
+                h3 {
+                    font-size: .625rem;
+                }
+
+                p {
+                    font-size: .5rem;
+                }
+            }
+
+            .FooterGreetings {
+                p {
+                    font-size: .6875rem;
+                }
+            }
+        }
+
+        .FinalSection {
+            img {
+                width: 20%;
+            }
+        }
+    }
+}
