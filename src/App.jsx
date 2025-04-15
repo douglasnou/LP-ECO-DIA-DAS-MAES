@@ -5,6 +5,7 @@ import BannerBig from "./assets/banner-big.png";
 import BannerSmall from "./assets/banner-small.png";
 import Logo1 from "./assets/Logo-1.png";
 import Logo2 from "./assets/Logo-2.png";
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,8 @@ function App() {
 
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
+  const notify = () => toast('Suas informações foram enviadas com sucesso!');
+  const errorNotify = () => toast('Oops! Algo deu errado!')
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -55,9 +58,20 @@ function App() {
       });
       setMessage('Dados enviados com sucesso!');
       setIsError(false);
+      setFormData({
+        nome: '',
+        whatsapp: '',
+        email: '',
+        ecoville: '',
+        cliente: '',
+        foto: null,
+        declaracao: false
+      })
+      notify();
       console.log(response.data);
     } catch (error) {
       setMessage('Erro ao enviar dados: ' + (error.response?.data?.error || error.message));
+      errorNotify();
       setIsError(true);
       console.error(error);
     }
@@ -137,6 +151,7 @@ function App() {
             value={formData.ecoville}
             required
           >
+
             <option value="">Selecione um Ecoville</option>
             <option value="Bacabal">Bacabal</option>
             <option value="Pinheiro">Pinheiro</option>
@@ -175,15 +190,17 @@ function App() {
             </div>
           </fieldset>
 
-          <fieldset>
-            <label>Sua foto:</label>
-            <input
-              type="file"
-              name="foto"
-              onChange={handleFileChange}
-              accept="image/png, image/jpeg"
-              required
-            />
+          <fieldset className={styled.FileUp}>
+            <div className={styled.FileContainer}>
+              <label>Clique no botão abaixo para fazer o download da sua foto</label>
+              <input
+                type="file"
+                name="foto"
+                onChange={handleFileChange}
+                accept="image/png, image/jpeg"
+                required
+              />
+            </div>
           </fieldset>
 
           <div className={styled.Check}>
@@ -203,9 +220,15 @@ function App() {
           <button className={styled.Btn} type="submit">Enviar</button>
         </form>
 
-        {message && (
-          <p style={{ color: isError ? 'red' : 'green' }}>{message}</p>
-        )}
+        <Toaster
+          position="bottom-center"
+          reverseOrder={false}
+          toastOptions={{
+            style:{
+              fontFamily: 'Montserrat',
+              color: '#FB4881',
+            }
+          }} />
       </div>
 
       <div className={styled.FooterSection}>
