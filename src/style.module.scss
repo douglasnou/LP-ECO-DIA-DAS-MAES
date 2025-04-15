@@ -424,7 +424,7 @@
             }
 
             .FormContainer {
-
+                width: 100%;
                 .InputText,
                 ::-webkit-input-placeholder,
                 select,
@@ -444,7 +444,7 @@
                 .FileUp{
                     margin-top: 30px;
                     height: 70px;
-                    width: 70%;
+                    width: 80%;
                     padding: 20px;
                     align-items: center;
                     justify-content: center;
